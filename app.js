@@ -10,8 +10,8 @@ var express = require("express"),
    // User = require("/models/user")
     
 //mongoose.connect("mongodb://localhost:27017/videoPlaylist",{useNewUrlParser : true});
-mongoose.connect("mongodb://Paras:PARAS123@ds259742.mlab.com:59742/mytube",{useNewUrlParser : true});
-//mongodb://<Paras>:PARAS123@ds259742.mlab.com:59742/mytube
+mongoose.connect("mongodb://<your database url + password>/mytube",{useNewUrlParser : true});
+
 app.use(methodOverride("_method"));
 
 app.use(bodyParser.urlencoded({extended: true}));
