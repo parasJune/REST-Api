@@ -1,0 +1,24 @@
+<% include partials/header%>
+<br>
+<div class="container">
+ <div class="jumbotron jumbotron-fluid" style="text-align:center">
+    <h1><%=channel.name%></h1>
+    <img src="<%= channel.image%>">
+    <p><%=channel.description%></p>
+    <form action="/mytube/<%=channel._id%>?_method=DELETE" method="POST" >
+        <button class="btn btn-success">Delete</button>
+        </form>
+        <a class="btn btn-success" href="/mytube/<%=channel._id%>/edit">Edit</a>
+        <a class="btn btn-success" href="/mytube/<%=channel._id%>/videos/new">Add video</a>
+    </div>
+    <div class="row">
+        <%channel.videos.forEach(function(video){%>
+        <div class="col-sm-4">
+            <iframe width="350" height="300" src="<%=video.link%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+        <%})%>
+    
+    </div>
+</div>
+<% include partials/footer%>

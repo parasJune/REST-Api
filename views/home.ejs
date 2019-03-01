@@ -1,0 +1,25 @@
+<% include partials/header%>
+<br>
+<br>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to Mytube</h1>
+            <p class="lead">Our Own Video Playlist App</p>
+            <a href="/mytube/new" class="btn btn-success">Add New Channel</a>
+        </div>
+    </div>
+    <div class = "row">
+    <%channel.forEach(function(channel) {%>
+        <div class="col-sm-4">
+            <h3><%= channel.name%></h3>
+            <img src="<%= channel.image%>">
+            <br>
+            <a class="btn btn-primary" href="/mytube/<%=channel._id%>">More info</a>
+        </div>
+        <br>
+        <br>
+        <%})%>
+  </div>
+</div>
+<% include partials/footer%>

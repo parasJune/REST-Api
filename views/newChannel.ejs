@@ -1,0 +1,30 @@
+<% include partials/header%>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="cotainer" style="text-align:center; border:2px solid black">
+<h2>Add new Channel</h2>
+<br>
+<br>
+<form method="POST" action="/mytube">
+  <div class="form-group">
+    <label >Name</label>
+    <input type="text" name="channel[name]" placeholder="Enter name">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Image    </label>
+    <input type="text" name="channel[image]" placeholder="Image URL">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea name="channel[description]" ></textarea>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+<% include partials/footer%>
